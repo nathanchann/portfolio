@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Nathan Chan - Portfolio</title>
-    <!-- Update the CSS path -->
+    <link href="workspaces-demo/css/bootstrap.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="workspaces-demo/css/theme.css" />
     <style>
       @font-face {
@@ -32,30 +32,6 @@
         font-size: 3rem;
         margin-bottom: 1rem;
         color: var(--bs-primary);
-      }
-      .loading {
-        width: 50px;
-        height: 50px;
-        border: 5px solid #f3f3f3;
-        border-top: 5px solid var(--bs-primary);
-        border-radius: 50%;
-        animation: spin 1s linear infinite;
-        margin: 20px auto;
-      }
-      .project-link {
-        display: inline-block;
-        text-decoration: none;
-        background-color: var(--bs-primary);
-        color: white;
-        padding: 12px 24px;
-        border-radius: 99rem;
-        font-weight: bold;
-        transition: all 0.3s ease;
-        margin-top: 2rem;
-      }
-      .project-link:hover {
-        transform: translateY(-2px);
-        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
       }
       .text-brand {
         color: #fe375c;
@@ -94,12 +70,19 @@
       >
         <div class="container">
           <h1 class="display-1 fw-bold text-brand">Work in Progress</h1>
-          <p class="lead">
-            My portfolio is currently under construction. Check back soon for
-            updates!
-          </p>
-          <a href="/workspaces-demo" class="btn btn-primary btn-lg px-4 gap-3"
-            >Check out my latest project →</a
+          <p class="lead">My portfolio is currently under construction.</p>
+          <a
+            href="/workspaces-demo"
+            style="
+              display: inline-block;
+              padding: 10px 20px;
+              background-color: #fe375c;
+              color: white;
+              text-decoration: none;
+              border-radius: 25px;
+              margin-top: 20px;
+            "
+            >Check out my latest project instead! →</a
           >
         </div>
       </div>
