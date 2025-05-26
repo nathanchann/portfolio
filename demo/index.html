@@ -72,6 +72,27 @@
           /* Chrome 26+, Opera 23+, Firefox 39+ */
             url("fonts/inter-v12-latin-700.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
       }
+
+      /* Add mobile-specific padding adjustment */
+      @media (max-width: 768px) {
+        .navbar {
+          padding-top: 32px;
+          padding-bottom: 0px;
+        }
+        .py-vh-5 {
+          padding-top: 1vh;
+          padding-bottom: 1vh;
+        }
+        .textdiv {
+          padding-top: 0px !important;
+        }
+        .textdiv2 {
+          padding-bottom: 5px !important;
+        }
+        /* .bg-light.rounded-5.textdiv {
+          padding-top: 0px !important;
+        } */
+      }
     </style>
   </head>
 
@@ -124,7 +145,7 @@
               </video>
             </div>
             <div class="col-12 col-lg-6">
-              <div class="bg-light rounded-5 py-5 px-4" data-aos="fade-up">
+              <div class="bg-light rounded-5 py-5 px-4 textdiv" data-aos="fade-up">
                 <span class="h5 text-brand fw-lighter">A Workspace Discovery App</span>
                 <h2 class="display-4">
                   Discover, review and share study or work locations near you.
@@ -166,7 +187,7 @@
       <div class="bg-light position-relative">
         <div class="container px-vw-5 py-vh-5">
           <div class="row d-flex align-items-center">
-            <div class="col-12 col-lg-5 bg-light rounded-5 py-5" data-aos="fade-right">
+            <div class="col-12 col-lg-5 bg-light rounded-5 py-5 textdiv2" data-aos="fade-right">
               <span class="h5 text-brand fw-lighter">Community Driven</span>
               <h2 class="display-4">
                 Shaped by real user submissions and reviews
