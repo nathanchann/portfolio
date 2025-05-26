@@ -1,0 +1,19 @@
+:root {
+  --bs-blue: #1717e5;
+  --bs-primary: #1717e5;
+  --bs-body-font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
+  --bs-body-font-size: 1.2rem;
+}
+
+.text-brand {
+  color: #fe375c !important;
+}
+
+.bg-white {
+  background-color: #fff !important;
+}
+
+.rounded-5 {
+  border-radius: 2rem !important;
+}

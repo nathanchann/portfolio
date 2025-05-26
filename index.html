@@ -1,43 +1,122 @@
 <!DOCTYPE html>
-<html lang="en" class="h-100">
+<html class="h-100" lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Workspaces Demo</title>
-    <link rel="stylesheet" href="css/theme.css" />
+    <title>Nathan Chan - Portfolio</title>
+    <!-- Update the CSS path -->
+    <link rel="stylesheet" href="workspaces-demo/css/theme.css" />
     <style>
-      body {
-        margin: 0;
-        height: 100vh;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        font-family: Arial, sans-serif;
-        background-color: #f5f5f5;
+      @font-face {
+        font-family: "Inter";
+        font-style: normal;
+        font-weight: 300;
+        font-display: swap;
+        src: local(""),
+          url("workspaces-demo/fonts/inter-v12-latin-300.woff2") format("woff2");
+      }
+      @font-face {
+        font-family: "Inter";
+        font-style: normal;
+        font-weight: 400;
+        font-display: swap;
+        src: local(""),
+          url("workspaces-demo/fonts/inter-v12-latin-regular.woff2")
+            format("woff2");
+      }
+      .container {
+        text-align: center;
+        padding: 2rem;
+      }
+      h1 {
+        font-size: 3rem;
+        margin-bottom: 1rem;
+        color: var(--bs-primary);
       }
       .loading {
         width: 50px;
         height: 50px;
         border: 5px solid #f3f3f3;
-        border-top: 5px solid #3498db;
+        border-top: 5px solid var(--bs-primary);
         border-radius: 50%;
         animation: spin 1s linear infinite;
-        margin: 20px;
+        margin: 20px auto;
       }
-      @keyframes spin {
-        0% {
-          transform: rotate(0deg);
-        }
-        100% {
-          transform: rotate(360deg);
-        }
+      .project-link {
+        display: inline-block;
+        text-decoration: none;
+        background-color: var(--bs-primary);
+        color: white;
+        padding: 12px 24px;
+        border-radius: 99rem;
+        font-weight: bold;
+        transition: all 0.3s ease;
+        margin-top: 2rem;
+      }
+      .project-link:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      }
+      .text-brand {
+        color: #fe375c;
+        font-weight: lighter;
+      }
+      /* Add these styles */
+      body {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+      }
+
+      main {
+        flex: 1 0 auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+
+      footer {
+        flex-shrink: 0;
+        position: relative; /* Prevents AOS from affecting it */
+        z-index: 1; /* Ensures footer stays above other elements */
       }
     </style>
   </head>
-  <body>
-    <h1>Portfolio Website</h1>
-    <p>Currently under construction</p>
-    <div class="loading"></div>
+  <body class="bg-white text-dark mt-0" data-bs-spy="scroll">
+    <nav class="navbar navbar-light bg-white px-vw-5" tabindex="0">
+      <div class="container text-center"></div>
+    </nav>
+
+    <main>
+      <div
+        class="w-100 overflow-hidden position-relative bg-white text-dark"
+        data-aos="fade"
+      >
+        <div class="container">
+          <h1 class="display-1 fw-bold text-brand">Work in Progress</h1>
+          <p class="lead">
+            My portfolio is currently under construction. Check back soon for
+            updates!
+          </p>
+          <a href="/workspaces-demo" class="btn btn-primary btn-lg px-4 gap-3"
+            >Check out my latest project →</a
+          >
+        </div>
+      </div>
+    </main>
+
+    <footer class="bg-white border-top border-secondary" data-aos="none">
+      <div class="container text-center small py-vh-2">
+        Part of Nathan Chan's Portfolio
+      </div>
+    </footer>
+
+    <script src="workspaces-demo/js/bootstrap.bundle.min.js"></script>
+    <script src="workspaces-demo/js/aos.js"></script>
+    <script>
+      AOS.init({
+        duration: 800,
+      });
+    </script>
   </body>
 </html>
