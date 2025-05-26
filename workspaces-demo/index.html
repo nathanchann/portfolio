@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html class="h-100" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width,initial-scale=1,shrink-to-fit=no"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="img/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="img/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="img/favicon-16x16.png"
+    />
+    <link rel="icon" type="image/png" sizes="96x96" href="img/favicon.png" />
+    <meta name="author" content="Holger Koenemann" />
+    <meta name="generator" content="Eleventy v2.0.1" />
+    <meta name="HandheldFriendly" content="true" />
+    <title>Workspaces Demo</title>
+    <link rel="stylesheet" href="css/theme.css" />
+
+    <style>
+      /* inter-300 - latin */
+      @font-face {
+        font-family: "Inter";
+        font-style: normal;
+        font-weight: 300;
+        font-display: swap;
+        src: local(""), url("fonts/inter-v12-latin-300.woff2") format("woff2"),
+          /* Chrome 26+, Opera 23+, Firefox 39+ */
+            url("fonts/inter-v12-latin-300.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+      }
+
+      /* inter-400 - latin */
+      @font-face {
+        font-family: "Inter";
+        font-style: normal;
+        font-weight: 400;
+        font-display: swap;
+        src: local(""),
+          url("fonts/inter-v12-latin-regular.woff2") format("woff2"),
+          /* Chrome 26+, Opera 23+, Firefox 39+ */
+            url("fonts/inter-v12-latin-regular.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+      }
+
+      @font-face {
+        font-family: "Inter";
+        font-style: normal;
+        font-weight: 500;
+        font-display: swap;
+        src: local(""), url("fonts/inter-v12-latin-500.woff2") format("woff2"),
+          /* Chrome 26+, Opera 23+, Firefox 39+ */
+            url("fonts/inter-v12-latin-500.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+      }
+      @font-face {
+        font-family: "Inter";
+        font-style: normal;
+        font-weight: 700;
+        font-display: swap;
+        src: local(""), url("fonts/inter-v12-latin-700.woff2") format("woff2"),
+          /* Chrome 26+, Opera 23+, Firefox 39+ */
+            url("fonts/inter-v12-latin-700.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+      }
+    </style>
+  </head>
+
+  <body
+    class="bg-white text-dark mt-0"
+    data-bs-spy="scroll"
+    data-bs-target="#navScroll"
+  >
+    <nav
+      id="navScroll"
+      class="navbar navbar-light bg-white px-vw-5"
+      tabindex="0"
+    >
+      <div class="container text-center">
+        <a
+          class="navbar-brand fs-7 text-center w-100"
+          href="index.html"
+        >
+          <span class="mt-1 fw-bolder text-brand">Workspaces</span>
+        </a>
+      </div>
+    </nav>
+
+    <main>
+      <div
+        class="w-100 overflow-hidden position-relative bg-white text-dark"
+        data-aos="fade"
+      >
+        <div
+          class="position-absolute w-100 h-100 bg-light opacity-75 top-0 start-0"
+        ></div>
+        </div>
+      </div>
+
+      <div
+        class="w-100 position-relative bg-white text-dark bg-cover d-flex align-items-center"
+      >
+        <div class="container-fluid px-vw-5">
+          <div
+            class="position-absolute w-100 h-50 bg-light bottom-0 start-0"
+          ></div>
+          <div
+            class="row d-flex align-items-center position-relative justify-content-center px-0 g-5"
+          >
+            <div class="col-12 col-lg-4">
+              <video
+                class="img-fluid position-relative h-50"
+                autoplay
+                loop
+                muted
+                playsinline
+                data-aos="fade-up"
+              >
+                <source src="video/your-video2.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3">
+              <div class="bg-light rounded-5 py-5" data-aos="fade-up">
+                <span class="h5 text-brand fw-lighter">A Workspace Discovery App</span>
+                <h2 class="display-4">
+                  Discover, review and share study or work locations near you.
+                </h2>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="bg-light">
+        <div class="container px-vw-5 py-vh-5">
+          <div class="row d-flex align-items-center">
+            <div class="col-12 col-lg-7 text-lg-end" data-aos="fade-right">
+              <span class="h5 text-brand fw-lighter">What it is</span>
+              <h2 class="display-4">
+                A complete workspace discovery platform powered by a modern technology stack, delivering a smooth user experience
+              </h2>
+            </div>
+            <div class="col-12 col-lg-5" data-aos="fade-left">
+              <h3 class="pt-5">Features</h3>
+              <p class="text-secondary">
+                🌍 Location-based search to discover nearby workspaces<br>
+                📊 Search integrates user uploads and Google Maps data<br>
+                ⭐ User reviews and ratings for each location<br>
+                🖼️ Photo sharing with moderation system<br>
+                ⚙️ Offline support with local caching<br>
+              </p>
+              <h3 class="border-top border-secondary pt-5 mt-5">Development & Engineering</h3>
+              <p class="text-secondary">
+                Frontend built with React Native and Expo for cross-platform mobile support. 
+                Backend powered by Supabase providing PostgreSQL database, authentication, and storage solutions. 
+                Integrated with Google Places API and optimized with custom RPCs for efficient data handling.<br>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-light position-relative">
+        <div class="container px-vw-5 py-vh-5">
+          <div class="row d-flex align-items-center">
+            <div class="col-12 col-lg-5 bg-light rounded-5 py-5" data-aos="fade-right">
+              <span class="h5 text-brand fw-lighter">Community Driven</span>
+              <h2 class="display-4">
+                Powered by users sharing their favorite workspaces
+              </h2>
+            </div>
+            <div class="col-12 col-lg-7">
+              <img
+                class="img-fluid rounded-5 shadow"
+                src="img/webp/person9.webp"
+                width="512"
+                height="512"
+                alt="person using the workspace app"
+                loading="lazy"
+                data-aos="zoom-in-left"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- <div class="bg-white">
+        <div class="container px-vw-5 py-vh-5">
+          <div class="row d-flex align-items-center">
+            <div
+              class="col-12 col-lg-5 text-center text-lg-end"
+              data-aos="zoom-in-right"
+            >
+              <span class="h5 text-secondary fw-lighter">What we charge</span>
+              <h2 class="display-4">
+                You get all our knowledge for one simple price
+              </h2>
+            </div>
+            <div
+              class="col-12 col-lg-7 bg-light rounded-5 py-vh-3 text-center my-5"
+              data-aos="zoom-in-up"
+            >
+              <h2 class="display-huge mb-5">
+                <span class="fs-4 me-2 fw-light">$</span
+                ><span class="border-bottom border-5">499</span
+                ><span class="fs-6 fw-light">/day</span>
+              </h2>
+              <p class="lead text-secondary">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip ex ea commodo consequat.
+              </p>
+              <a href="#" class="btn btn-xl btn-light"
+                >Sign up
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  class="bi bi-arrow-right"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"
+                  />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div> -->
+    </main>
+    <footer class="bg-white border-top border-secondary">
+
+      <div class="container text-center small py-vh-2">
+        Part of Nathan Chan's Portfolio
+
+      </div>
+    </footer>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/aos.js"></script>
+    <script>
+      AOS.init({
+        duration: 800,
+      });
+    </script>
+  </body>
+</html>
