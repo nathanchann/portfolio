@@ -31,37 +31,30 @@
     <link rel="stylesheet" href="css/theme.css" />
 
     <style>
-      /* inter-300 - latin */
+      /* Inter font faces */
       @font-face {
         font-family: "Inter";
         font-style: normal;
         font-weight: 300;
         font-display: swap;
         src: local(""), url("fonts/inter-v12-latin-300.woff2") format("woff2"),
-          /* Chrome 26+, Opera 23+, Firefox 39+ */
-            url("fonts/inter-v12-latin-300.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+          url("fonts/inter-v12-latin-300.woff") format("woff");
       }
-
-      /* inter-400 - latin */
       @font-face {
         font-family: "Inter";
         font-style: normal;
         font-weight: 400;
         font-display: swap;
-        src: local(""),
-          url("fonts/inter-v12-latin-regular.woff2") format("woff2"),
-          /* Chrome 26+, Opera 23+, Firefox 39+ */
-            url("fonts/inter-v12-latin-regular.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+        src: local(""), url("fonts/inter-v12-latin-regular.woff2") format("woff2"),
+          url("fonts/inter-v12-latin-regular.woff") format("woff");
       }
-
       @font-face {
         font-family: "Inter";
         font-style: normal;
         font-weight: 500;
         font-display: swap;
         src: local(""), url("fonts/inter-v12-latin-500.woff2") format("woff2"),
-          /* Chrome 26+, Opera 23+, Firefox 39+ */
-            url("fonts/inter-v12-latin-500.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+          url("fonts/inter-v12-latin-500.woff") format("woff");
       }
       @font-face {
         font-family: "Inter";
@@ -69,16 +62,11 @@
         font-weight: 700;
         font-display: swap;
         src: local(""), url("fonts/inter-v12-latin-700.woff2") format("woff2"),
-          /* Chrome 26+, Opera 23+, Firefox 39+ */
-            url("fonts/inter-v12-latin-700.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+          url("fonts/inter-v12-latin-700.woff") format("woff");
       }
 
-      /* Add mobile-specific padding adjustment */
+      /* Mobile responsive adjustments */
       @media (max-width: 768px) {
-        .navbar {
-          padding-top: 32px;
-          padding-bottom: 0px;
-        }
         .py-vh-5 {
           padding-top: 1vh;
           padding-bottom: 1vh;
@@ -89,22 +77,66 @@
         .textdiv2 {
           padding-bottom: 5px !important;
         }
-        /* .bg-light.rounded-5.textdiv {
-          padding-top: 0px !important;
-        } */
-         /* Mobile responsive navigation text */
-        .navbar-brand span,
-        .navbar a span {
-          font-size: 1em !important;
+        .navbar-brand span {
+          font-size: 1.2rem !important;
+        }
+        .nav-link {
+          font-size: 0.9rem !important;
+        }
+        .breaktime-title {
+          font-size: 4.5rem !important;
+        }
+        /* Responsive flexbox section mobile adjustments */
+        @media (max-width: 991px) {
+          .responsive-flex-section {
+            flex-direction: column !important;
+            text-align: center !important;
+            gap: 2rem !important;
+          }
+          .responsive-flex-section img {
+            max-width: 100vw !important;
+            order: 1 !important;
+          }
+          .responsive-flex-section .textdiv {
+            order: 0 !important;
+            padding: 2rem 1rem !important;
+          }
+          .responsive-flex-section .textdiv img {
+            max-width: 30vw !important;
+          }
+          /* Features section mobile adjustments */
+          .features-section {
+            flex-direction: column !important;
+            gap: 2rem !important;
+          }
+          .features-section video {
+            max-width: 90vw !important;
+          }
+          .features-section .flex-grow-1 {
+            text-align: center !important;
+          }
         }
       }
 
-      /* More specific override for text-brand */
-      .navbar .navbar-brand .text-brand,
-      .container .text-brand {
-        color: #000000 !important;
+      /* Navbar navigation horizontal alignment */
+      .navbar-nav.d-flex.flex-row {
+        flex-direction: row !important;
       }
-      
+
+      /* Fix navbar vertical alignment */
+      .navbar-brand {
+        display: flex !important;
+        align-items: center !important;
+      }
+
+      .navbar-nav.d-flex.flex-row {
+        align-items: center !important;
+      }
+
+      .nav-link {
+        padding-top: 0.275rem !important;
+        padding-bottom: 0.275rem !important;
+      }
     </style>
   </head>
 
