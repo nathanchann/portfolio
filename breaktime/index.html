@@ -135,75 +135,96 @@
       </div>
     </nav>
     <main>
-      <div
-        class="w-100 overflow-hidden position-relative bg-white text-dark"
-        data-aos="fade"
+<div
+        class="w-100 position-relative bg-white text-dark bg-cover d-flex align-items-center"
       >
-        <div
-          class="position-absolute w-100 h-100 bg-light opacity-75 top-0 start-0"
-        ></div>
+        <div class="container pl-vw3 pr-vw5 py-vh-5">
+          <div class="d-flex align-items-center justify-content-center flex-column flex-lg-row gap-3 responsive-flex-section">
+            <div class="flex-shrink-0 order-1 order-lg-0 pw">
+              <img
+                src="img/multimockupbanner.png"
+                alt="Breaktime App Mockup"
+                class="img-fluid"
+                style="max-width: 55vw"
+                data-aos="fade-up"
+              />
+            </div>
+            <div class="flex-grow-1 order-0 order-lg-1 text-center text-lg-start">
+              <div
+                class="bg-light rounded-5 py-5 px-4 textdiv"
+                data-aos="fade-up"
+              >
+                <span class="h3 text-brand fw-lighter"
+                  >A focus app <br> that actually works.</span
+                >
+                <h1 class="fw-bold breaktime-title" style="font-size: 6rem;">Breaktime</h1>
+                <img
+                  src="img/comingsoon.png"
+                  alt="Coming Soon"
+                  class="img-fluid mt-4"
+                  style="max-width: 10vw"
+                />
+              </div>
+            </div>
+          </div>
         </div>
       </div>
 
-      <div class="w-100 position-relative bg-white text-dark bg-cover d-flex align-items-center">
+      <div
+        class="w-100 overflow-hidden position-relative bg-white text-dark pt-5"
+        data-aos="fade"
+      >
         <div class="container px-vw-5 py-vh-5">
           <div class="row d-flex align-items-center justify-content-center">
             <div class="col-12 col-lg-6 text-center text-lg-end">
+              <h1 class="display-2 fw-bold">Join the Waitlist</h1>
+              <p class="lead mt-3">Get notified when Breaktime releases to the App Store or sign up to be a beta tester</p>
+            </div>
+            <div class="col-12 col-lg-6">
+              <iframe data-tally-src="https://tally.so/embed/mDOaRN?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1" loading="lazy" width="100%" height="450" frameborder="0" marginheight="0" marginwidth="0" title="Join the waitlist"></iframe>
+              <script>var d=document,w="https://tally.so/widgets/embed.js",v=function(){"undefined"!=typeof Tally?Tally.loadEmbeds():d.querySelectorAll("iframe[data-tally-src]:not([src])").forEach((function(e){e.src=e.dataset.tallySrc}))};if("undefined"!=typeof Tally)v();else if(d.querySelector('script[src="'+w+'"]')==null){var s=d.createElement("script");s.src=w,s.onload=v,s.onerror=v,d.body.appendChild(s);}</script>
+            </div>
+          </div>
+        </div>
+        </div>
+      </div>
+
+      <div class="bg-light">
+        <div class="container px-vw-5 py-vh-3">
+          <div class="d-flex align-items-center justify-content-center flex-column flex-lg-row features-section" style="gap: 4rem;">
+            <div class="flex-shrink-0 text-center" data-aos="fade-right">
               <video
-                class="img-fluid position-relative mx-auto"
-                style="max-width: 450px;"
+                class="img-fluid mx-auto"
+                style="max-width: 450px"
                 autoplay
                 loop
                 muted
                 playsinline
                 data-aos="fade-up"
               >
-                <source src="video/breaktimedemo.mp4" type="video/mp4" />
+                <source src="video/breaktimedemonew.mp4" type="video/mp4" />
                 Your browser does not support the video tag.
               </video>
             </div>
-            <div class="col-12 col-lg-6">
-              <div class="bg-light rounded-5 py-5 px-4 textdiv" data-aos="fade-up">
-                <span class="h5 text-brand fw-lighter">A Focus App That Actually Works</span>
-                <h2 class="display-4 mb-4">
-                  Stay focused with intentional breaks and strict app blocking
-                </h2>
-                <img 
-                  src="img/comingsoon.png" 
-                  alt="Coming Soon" 
-                  class="img-fluid mt-4" 
-                  style="max-width: 250px;"
-                >
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="bg-light">
-        <div class="container px-vw-5 py-vh-5">
-          <div class="row d-flex align-items-center">
-            <div class="col-12 col-lg-7 text-lg-end" data-aos="fade-right">
-              <span class="h5 text-brand fw-lighter">What it is</span>
-              <h2 class="display-4">
-                A minimal yet powerful screen time management app that helps you stay focused
-              </h2>
-            </div>
-            <div class="col-12 col-lg-5" data-aos="fade-left">
+            <div class="flex-grow-1 text-center text-lg-start" data-aos="fade-left">
               <h3 class="pt-5">Features</h3>
-              <p class="text-secondary">
-                🚫 Complete blocking of distracting apps<br>
-                ⏱️ Choose intentional break time limits<br>
-                🤔 10-second reflection before breaks<br>
-                🎯 Minimal UI to minimise distractions<br>
-                ⚡ Quick 30-second setup<br>
-                🔒 Optional strict mode with no breaks<br>
+              <p class="lead mt-3" style="font-size: 1.5rem;">
+                🚫 Block distracting apps permanently<br />
+                ⏱️ Unlock them with an intentional timed break<br />
+                🔒 Apps automatically restrict after break ends<br />
+                🤔 Reflection timer window before break can be started<br />
+                🎯 Minimal UI to minimise distractions<br />
+                ⚡ Quick 30-second setup<br />
               </p>
-              <h3 class="border-top border-secondary pt-5 mt-5">Development & Engineering</h3>
-              <p class="text-secondary">
-                - Built natively with Swift for iOS.<br>
-                - Leverages Apple's Screen Time API for robust app blocking.<br>
-                - Clean architecture with MVVM pattern.<br>
-                - Local-first design for privacy and performance.<br>
+              <h3 class="pt-4.8 mt-5">
+                How is Breaktime different to other focus apps?
+              </h3>
+              <p class="lead mt-3" style="font-size: 1.45rem;">
+                We believe that starting a focus period manually each time isn't the right approach. Why not block apps permanently and start a break period to unlock it?<br />
+                <br />
+                Default ScreenTime statistics are flawed. Not all ScreenTime is unproductive. Breaktime tracks your distraction time accurately.<br />
+                <br />
+                Overcomplicated user interfaces with excessive features are distracting (defeating the purpose), we keep it simple to help you stay focused.<br />
               </p>
             </div>
           </div>
@@ -213,20 +234,25 @@
       <div class="bg-light position-relative">
         <div class="container px-vw-5 py-vh-5">
           <div class="row d-flex align-items-center">
-            <div class="col-12 col-lg-5 bg-light rounded-5 py-5 textdiv2" data-aos="fade-right">
-              <span class="h5 text-brand fw-lighter">Customize your focus needs</span>
+            <div
+              class="col-12 col-lg-5 bg-light rounded-5 py-5 textdiv2"
+              data-aos="fade-right"
+            >
+              <span class="h5 text-brand fw-lighter"
+                >Customize focus to your needs</span
+              >
               <h2 class="display-4">
-                Built to help you make intentional choices about your screen time
+                Choose exactly what works for you and helps keep you focused.
               </h2>
             </div>
             <div class="col-12 col-lg-7">
               <img
                 src="img/iphoneleft.png"
                 class="img-fluid position-relative"
-                style="max-width: 450px;"
+                style="max-width: 450px"
                 data-aos="zoom-in-left"
                 alt="iPhone screenshot of Breaktime app"
-              >
+              />
             </div>
           </div>
         </div>
