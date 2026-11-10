@@ -24,7 +24,7 @@
       href="img/favicon-16x16.png"
     />
     <link rel="icon" type="image/png" sizes="96x96" href="img/favicon.png" />
-    <meta name="author" content="Holger Koenemann" />
+    <meta name="author" content="Breaktime" />
     <meta name="generator" content="Eleventy v2.0.1" />
     <meta name="HandheldFriendly" content="true" />
     <title>Breaktime Demo</title>
@@ -140,6 +140,31 @@
         padding-top: 0.275rem !important;
         padding-bottom: 0.275rem !important;
       }
+
+      .store-badge {
+        width: auto;
+      }
+      .store-badge-apple {
+        height: 4.05vw;
+      }
+      .store-badge-google {
+        height: 3.85vw;
+      }
+      .store-badge-google-small {
+        height: 1.93vw;
+        margin-top: 0.75rem;
+      }
+      @media (max-width: 768px) {
+        .store-badge-apple {
+          height: 43px;
+        }
+        .store-badge-google {
+          height: 41px;
+        }
+        .store-badge-google-small {
+          height: 21px;
+        }
+      }
     </style>
   </head>
 
@@ -175,13 +200,21 @@
       >
         <div class="container pl-vw3 pr-vw5 py-vh-5">
           <div class="d-flex align-items-center justify-content-center flex-column flex-lg-row gap-3 responsive-flex-section">
-            <div class="flex-shrink-0 order-1 order-lg-0 pw">
+            <div class="flex-shrink-0 order-1 order-lg-0 pw" style="position: relative;" data-aos="fade-up">
               <img
-                src="img/multimockupbanner.png"
+                id="mockupBottom"
+                src="img/mockups/1.png"
                 alt="Breaktime App Mockup"
                 class="img-fluid"
                 style="max-width: 55vw"
-                data-aos="fade-up"
+              />
+              <img
+                id="mockupTop"
+                src="img/mockups/1.png"
+                alt=""
+                aria-hidden="true"
+                class="img-fluid"
+                style="max-width: 55vw; position: absolute; top: 0; left: 0; width: 100%; height: 100%; opacity: 0; transition: opacity 0.8s ease;"
               />
             </div>
             <div class="flex-grow-1 order-0 order-lg-1 text-center text-lg-start">
@@ -193,29 +226,40 @@
                   >Helping 10000+<br> users stay focused</span
                 >
                 <h1 class="fw-bold breaktime-title" style="font-size: 6rem;">Breaktime</h1>
-                <div class="mt-4 mb-4">
-                  <h2 class="h3 fw-light text-dark">Now Available on App Store</h2>
-                  <p class="lead text-secondary mb-3" style="font-size: 1.1rem;">Compatible with iPhone and iPad iOS 17+<br></p>
+                <div class="mt-4 d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start gap-3">
+                  <a href="https://apps.apple.com/au/app/breaktime-focus-app-blocker/id6746742596" target="_blank">
+                    <img
+                      src="img/downloadlogo.png"
+                      alt="Download on the App Store"
+                      class="store-badge store-badge-apple"
+                    />
+                  </a>
+                  <a href="https://play.google.com/store/apps/details?id=com.breaktimeapp.breaktime" target="_blank">
+                    <img
+                      src="img/google-play-badge.png"
+                      alt="Get it on Google Play"
+                      class="store-badge store-badge-google"
+                    />
+                  </a>
                 </div>
-                <a href="https://apps.apple.com/au/app/breaktime-focus-app-blocker/id6746742596" target="_blank">
-                  <img
-                    src="img/downloadlogo.png"
-                    alt="Download Now"
-                    class="img-fluid"
-                    style="max-width: 13vw"
-                  />
-                </a>
               </div>
             </div>
           </div>
         </div>
       </div>
 
-        <div class="container px-vw-5 py-vh-5" style="margin-top: 6rem;">
+        <div class="container px-vw-5 py-vh-5" id="waitlist" style="margin-top: 6rem;">
           <div class="row d-flex align-items-center justify-content-center">
             <div class="col-12 col-lg-6 text-center text-lg-end">
-              <h1 class="display-2 fw-bold">Subscribe to our newsletter</h1>
-              <p class="lead mt-3">Get access to latest updates, news and when macOS releases.</p>
+              <h1 class="display-2 fw-bold">Subscribe to our Chrome Extension waitlist</h1>
+              <p class="lead mt-3">Breaktime is now available on Android</p>
+              <a href="https://play.google.com/store/apps/details?id=com.breaktimeapp.breaktime" target="_blank" class="d-inline-block">
+                <img
+                  src="img/google-play-badge.png"
+                  alt="Get it on Google Play"
+                  class="store-badge store-badge-google-small"
+                />
+              </a>
             </div>
             <div class="col-12 col-lg-6">
               <iframe data-tally-src="https://tally.so/embed/3qrRBg?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1" loading="lazy" width="100%" height="579" frameborder="0" marginheight="0" marginwidth="0" title="Subscribe to Newsletter"></iframe>
@@ -247,10 +291,12 @@
             <div class="flex-grow-1 text-center text-lg-start" data-aos="fade-left">
               <h3 class="pt-5">Features</h3>
               <p class="lead mt-3" style="font-size: 1.5rem;">
-                🚫 Block distracting apps permanently<br />
+                🔒 Block distracting apps 24/7<br />
                 ⏱️ Unlock them with an intentional timed break<br />
                 🔒 Apps automatically restrict after break ends<br />
-                🤔 Reflection timer window before break can be started<br />
+                🤔 Customiseable cooldown delay before starting break <br />
+                ✈️ Travel Mode: block apps automatically while away from home <br />
+                🚫 Strict Mode: set a timer with no breaks or bypasses allowed <br />
                 🎯 Minimal UI to minimise distractions<br />
                 ⚡ Quick 30-second setup<br />
               </p>
@@ -258,11 +304,11 @@
                 How is Breaktime different to other focus apps?
               </h3>
               <p class="lead mt-3" style="font-size: 1.45rem;">
-                Breaktime makes you choose exactly how long you intend to use an app before you unlock it and holds you accountable<br />
+                Breaktime makes you set a time limit on <b>every</b> open.<br />
                 <br />
-                Before you can start a break there’s a customisable delay for friction, allowing you to pause and reconsider (no bypasses).<br />
+                Before you can start a break there’s a customisable delay for friction, allowing you to pause and reconsider.<br />
                 <br />
-                Overcomplicated user interfaces with excessive features are distracting (defeating the purpose). We keep it simple to help you stay focused.<br />
+                Some apps have excessive features and distracting user interfaces. Breaktime is purposefully simple to help you stay focused.<br />
               </p>
             </div>
           </div>
@@ -376,9 +422,9 @@
         <div>Breaktime 2025</div>
         <div class="d-flex align-items-center" style="gap: 1rem;">
           <div>
-            <a href="contact.html" class="text-dark text-decoration-none me-3">Contact</a>
-            <a href="faq.html" class="text-dark text-decoration-none me-3">FAQ</a>
-            <a href="privacy-policy.html" class="text-dark text-decoration-none me-3">Privacy Policy</a>
+            <a href="https://www.breaktimeapp.io/contact" target="_blank" class="text-dark text-decoration-none me-3">Contact</a>
+            <a href="https://www.breaktimeapp.io/faq" target="_blank" class="text-dark text-decoration-none me-3">FAQ</a>
+            <a href="https://www.breaktimeapp.io/privacy-policy" target="_blank" class="text-dark text-decoration-none me-3">Privacy Policy</a>
           </div>
           <a href="https://apps.apple.com/au/app/breaktime-focus-app-blocker/id6746742596" target="_blank">
             <img src="img/downloadlogo.png" alt="Download Breaktime" style="height: 2rem;">
@@ -448,6 +494,41 @@
       AOS.init({
         duration: 800,
       });
+    </script>
+    <script>
+      (function () {
+        var imgs = [
+          "img/mockups/1.png", "img/mockups/2.png", "img/mockups/3.png", "img/mockups/4.png", "img/mockups/5.png",
+          "img/mockups/6.png", "img/mockups/7.png", "img/mockups/8.png", "img/mockups/9.png", "img/mockups/10.png"
+        ];
+        // Fisher-Yates: randomize the order once per page load, still cycling through all 10.
+        for (var i = imgs.length - 1; i > 0; i--) {
+          var j = Math.floor(Math.random() * (i + 1));
+          var tmp = imgs[i]; imgs[i] = imgs[j]; imgs[j] = tmp;
+        }
+        // Preload so a crossfade never reveals a partially-loaded image.
+        imgs.forEach(function (src) { var img = new Image(); img.src = src; });
+
+        var bottom = document.getElementById("mockupBottom");
+        var top = document.getElementById("mockupTop");
+        if (!bottom || !top) return;
+
+        var idx = 0;
+        bottom.src = imgs[0];
+        top.src = imgs[0];
+        // Once the incoming image has faded in on top, copy it down to the base layer
+        // and hide the top layer again — no visible change, both show the same image.
+        top.addEventListener("transitionend", function () {
+          bottom.src = top.src;
+          top.style.opacity = "0";
+        });
+
+        setInterval(function () {
+          idx = (idx + 1) % imgs.length;
+          top.src = imgs[idx];
+          top.style.opacity = "1";
+        }, 5000);
+      })();
     </script>
   </body>
 </html>
