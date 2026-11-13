@@ -160,7 +160,7 @@ html{scroll-behavior:smooth}body{margin:0;background:#F6F8FA;-webkit-font-smooth
           </div>
           <div id="tabs" role="group" aria-label="Filter toolbox" style="display: flex; flex-wrap: wrap; gap: 2px; padding: 4px; border-radius: var(--rb); background: var(--ch);"></div>
         </div>
-        <div id="stack" style="display: flex; flex-wrap: wrap; gap: 8px; font-size: 14px; font-weight: 500;"></div>
+        <div id="stack" style="display: flex; flex-wrap: wrap; gap: 6px; font-size: 12.5px; font-weight: 500;"></div>
       </section>
 
       <section id="experience" class="span2 row2" style="grid-column: span 2; grid-row: span 2; background: var(--tl); border-radius: var(--r); padding: 28px; display: flex; flex-direction: column; gap: 10px;">
@@ -342,21 +342,10 @@ html{scroll-behavior:smooth}body{margin:0;background:#F6F8FA;-webkit-font-smooth
   if (window.ResizeObserver) new ResizeObserver(fitHeat).observe(heatEl); else window.addEventListener('resize', fitHeat);
 
   // Toolbox filter
-  var where = {
-'TypeScript': 'Faction · Signal', 'Python': 'Faction · Macquarie', 'Swift': 'Breaktime',
-'React': 'Faction · Signal', 'TanStack Query': 'Faction · Signal', 'tRPC': 'Signal', 'Zod': 'Faction',
-'FastAPI': 'Faction', 'SQLAlchemy': 'Faction', 'PostgreSQL': 'Workspaces', 'Redis': 'Macquarie',
-'LiveKit': 'Faction', 'Cartesia': 'Faction', 'SwiftUI': 'Breaktime', 'React Native': 'Workspaces',
-'Expo': 'Workspaces', 'XCTest': 'Breaktime', 'AWS S3': 'Signal', 'Loki / PromQL': 'Macquarie'
-};
-  var groups = {
-frontend: ['TypeScript', 'React', 'Next.js', 'Tailwind CSS', 'TanStack Query', 'tRPC', 'Zod'],
-backend: ['Python', 'FastAPI', 'SQLAlchemy', 'Node.js', 'Django', 'PostgreSQL', 'Redis', 'Drizzle', 'LiveKit', 'Cartesia'],
-mobile: ['Swift', 'SwiftUI', 'React Native', 'Expo', 'XCTest'],
-infra: ['Docker', 'AWS S3', 'GitLab CI', 'Loki / PromQL', 'Railway', 'Doppler', 'Bazel', 'Jest', 'Cypress']
-};
-  groups.all = ['TypeScript', 'Python', 'Swift', 'React', 'Next.js', 'React Native', 'SwiftUI', 'FastAPI', 'PostgreSQL', 'TanStack Query', 'tRPC', 'Redis', 'Docker', 'AWS S3'];
-  var tabs = [['all', 'All'], ['frontend', 'Frontend'], ['backend', 'Backend'], ['mobile', 'Mobile'], ['infra', 'Infra']];
+  var where = {"TypeScript": "Faction · Signal · Airtable Clone", "JavaScript": "Faction · Workspaces", "Python": "Faction · Macquarie · Humm", "Swift": "Breaktime", "SQL": "Macquarie · Humm · Faction", "React": "Faction · Signal · Airtable Clone", "Next.js": "Faction · Signal · Airtable Clone", "HTML": "UNSW · MARKSOC", "CSS": "UNSW · Signal", "Tailwind CSS": "Faction · Signal · Workspaces", "shadcn/ui": "Signal", "TanStack Query": "Faction · Signal · Airtable Clone", "TanStack Table": "Airtable Clone", "TanStack Virtual": "Airtable Clone", "tRPC": "Signal · Airtable Clone", "Zod": "Faction · Signal", "nuqs": "Faction", "ts-pattern": "Faction", "Auth.js": "Signal · Airtable Clone", "Clerk": "Faction", "Playwright": "Faction", "Jest": "Workspaces", "Cypress": "UNSW", "Node.js": "Signal · Airtable Clone", "FastAPI": "Faction", "SQLAlchemy": "Faction", "Alembic": "Faction", "Pydantic": "Faction", "Django": "UNSW", "PostgreSQL": "Faction · Signal · Workspaces", "Redis": "Macquarie · Faction", "Prisma": "Signal", "Drizzle": "Airtable Clone", "Supabase": "Workspaces · Faction", "Neon": "Signal", "Snowflake": "Faction", "Oban": "Faction", "Java": "UNSW", "C": "UNSW", "Bash": "Faction · claude-grep · video-downloader", "SwiftUI": "Breaktime", "Screen Time API": "Breaktime", "XCTest": "Breaktime", "TestFlight": "Breaktime", "Xcode": "Breaktime", "React Native": "Workspaces", "Expo": "Workspaces", "OpenAI API": "Faction", "LLM evals": "Faction", "Langfuse": "Faction", "LiveKit": "Faction", "Cartesia": "Faction", "Hamming": "Faction", "Bluejay": "Faction", "Claude Code": "Faction · claude-grep", "Docker": "Macquarie", "Kubernetes": "Macquarie", "AWS S3": "Faction · Signal", "Vercel": "Faction · Airtable Clone", "Railway": "Faction", "Cloudflare Workers": "Reel pipeline", "Doppler": "Faction", "GitHub Actions": "Faction", "GitLab CI": "Macquarie", "Bazel": "Macquarie", "Grafana": "Macquarie", "Loki / PromQL": "Macquarie", "Sentry": "Faction", "PostHog": "Faction", "FFmpeg": "Reel pipeline", "Graphite": "Faction", "Linear": "Faction", "Jira": "Macquarie", "Pandas": "Humm", "Matplotlib": "Humm", "R": "UNSW", "Power BI": "Humm", "Looker Studio": "Humm", "Google Apps Script": "Humm", "BeautifulSoup": "Hackathon"};
+  var groups = {"frontend": ["TypeScript", "JavaScript", "React", "Next.js", "HTML", "CSS", "Tailwind CSS", "shadcn/ui", "TanStack Query", "TanStack Table", "TanStack Virtual", "tRPC", "Zod", "nuqs", "ts-pattern", "Auth.js", "Clerk", "Playwright", "Jest", "Cypress"], "backend": ["Python", "Node.js", "FastAPI", "SQLAlchemy", "Alembic", "Pydantic", "Django", "PostgreSQL", "Redis", "Prisma", "Drizzle", "Supabase", "Neon", "Snowflake", "Oban", "Java", "C", "Bash"], "mobile": ["Swift", "SwiftUI", "Screen Time API", "XCTest", "TestFlight", "Xcode", "React Native", "Expo"], "ai": ["OpenAI API", "LLM evals", "Langfuse", "LiveKit", "Cartesia", "Hamming", "Bluejay", "Claude Code"], "infra": ["Docker", "Kubernetes", "AWS S3", "Vercel", "Railway", "Cloudflare Workers", "Doppler", "GitHub Actions", "GitLab CI", "Bazel", "Grafana", "Loki / PromQL", "Sentry", "PostHog", "FFmpeg", "Git", "Graphite", "Linear", "Jira", "Figma"], "data": ["SQL", "Pandas", "Matplotlib", "R", "Power BI", "Looker Studio", "Google Apps Script", "BeautifulSoup"]};
+  groups.all = ["TypeScript", "Python", "Swift", "SQL", "JavaScript", "React", "Next.js", "HTML", "CSS", "Tailwind CSS", "shadcn/ui", "TanStack Query", "TanStack Table", "TanStack Virtual", "tRPC", "Zod", "nuqs", "ts-pattern", "Auth.js", "Clerk", "Playwright", "Jest", "Cypress", "Node.js", "FastAPI", "SQLAlchemy", "Alembic", "Pydantic", "Django", "PostgreSQL", "Redis", "Prisma", "Drizzle", "Supabase", "Neon", "Snowflake", "Oban", "Java", "C", "Bash", "SwiftUI", "Screen Time API", "XCTest", "TestFlight", "Xcode", "React Native", "Expo", "OpenAI API", "LLM evals", "Langfuse", "LiveKit", "Cartesia", "Hamming", "Bluejay", "Claude Code", "Docker", "Kubernetes", "AWS S3", "Vercel", "Railway", "Cloudflare Workers", "Doppler", "GitHub Actions", "GitLab CI", "Bazel", "Grafana", "Loki / PromQL", "Sentry", "PostHog", "FFmpeg", "Git", "Graphite", "Linear", "Jira", "Figma", "Pandas", "Matplotlib", "R", "Power BI", "Looker Studio", "Google Apps Script", "BeautifulSoup"];
+  var tabs = [['all', 'All'], ['frontend', 'Frontend'], ['backend', 'Backend'], ['mobile', 'Mobile'], ['ai', 'AI'], ['infra', 'Infra'], ['data', 'Data']];
   var tabsEl = document.getElementById('tabs');
   var stackEl = document.getElementById('stack');
   function renderStack(cur) {
@@ -365,7 +354,7 @@ infra: ['Docker', 'AWS S3', 'GitLab CI', 'Loki / PromQL', 'Railway', 'Doppler', 
       return '<button type="button" class="seg" data-id="' + t[0] + '" aria-pressed="' + on + '" style="min-height: 36px; padding: 0 12px; border: none; border-radius: calc(var(--rb) - 4px); font: inherit; font-size: 13px; font-weight: 500; background: ' + (on ? 'var(--tl)' : 'transparent') + '; color: ' + (on ? 'var(--tx)' : 'var(--mu)') + '; box-shadow: ' + (on ? '0 1px 2px rgba(15,23,42,.12)' : 'none') + ';">' + t[1] + '</button>';
     }).join('');
     stackEl.innerHTML = groups[cur].map(function (n) {
-      return '<span class="tip" data-tip="' + (where[n] ? 'Used at ' + esc(where[n]) : '') + '" style="padding: 8px 14px; border-radius: calc(var(--rb) - 4px); background: var(--ch);">' + esc(n) + '</span>';
+      return '<span class="tip" data-tip="' + (where[n] ? 'Used at ' + esc(where[n]) : '') + '" style="padding: 5px 10px; border-radius: calc(var(--rb) - 5px); background: var(--ch);">' + esc(n) + '</span>';
     }).join('');
   }
   tabsEl.addEventListener('click', function (e) {
