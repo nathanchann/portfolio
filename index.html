@@ -100,6 +100,10 @@ html{scroll-behavior:smooth}body{margin:0;background:#F6F8FA;-webkit-font-smooth
 .pt .pcard.wide>:not(.pimg){grid-column:2}
 .pt .pcard.wide .chips{align-self:end}
 @media (max-width: 620px){.pt .pcard.wide{display:flex}.pt .pcard.wide .pimg{height:auto;aspect-ratio:2/1;margin-bottom:14px}}
+.pt .logo.duo{position:relative;display:block}
+.pt .logo.duo img{position:absolute;width:23px;height:23px;border-radius:6px;box-shadow:0 0 0 2px var(--sf)}
+.pt .logo.duo img:first-child{left:0;bottom:0}
+.pt .logo.duo img:last-child{right:0;top:0}
 </style>
 </head>
 <body>
@@ -191,7 +195,7 @@ html{scroll-behavior:smooth}body{margin:0;background:#F6F8FA;-webkit-font-smooth
         <h2 style="margin: 0 0 4px; font-size: 13px; font-weight: 600; color: var(--mu);">Experience</h2>
         <details open style="border-radius: var(--ri); background: var(--sf);">
           <summary style="display: flex; justify-content: space-between; align-items: center; gap: 12px; min-height: 64px; padding: 0 18px;">
-            <span class="ent"><img class="logo" src="img/logos/faction.png" alt="" width="36" height="36"><span><span style="display: block; font-family: var(--hd); font-weight: var(--hw); font-size: 17px;">Lyra | Faction (a16z)</span><span style="font-size: 13px; color: var(--mu);">Forward Deployed SWE · Feb 2026 – Now</span></span></span>
+            <span class="ent"><span class="logo duo" aria-hidden="true"><img src="img/logos/lyra.png" alt="" width="26" height="26"><img src="img/logos/faction.png" alt="" width="26" height="26"></span><span><span style="display: block; font-family: var(--hd); font-weight: var(--hw); font-size: 17px;">Lyra | Faction (a16z)</span><span style="font-size: 13px; color: var(--mu);">Forward Deployed SWE · Feb 2026 – Now</span></span></span>
             <svg class="chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"></path></svg>
           </summary>
           <ul style="margin: 0; padding: 0 18px 16px 36px; font-size: 14px; line-height: 1.6;">
@@ -231,7 +235,7 @@ html{scroll-behavior:smooth}body{margin:0;background:#F6F8FA;-webkit-font-smooth
         <h2 style="margin: 0 0 4px; font-size: 13px; font-weight: 600; color: var(--mu);">Education</h2>
         <details open style="border-radius: var(--ri); background: var(--sf);">
           <summary style="display: flex; justify-content: space-between; align-items: center; gap: 12px; min-height: 64px; padding: 0 18px;">
-            <span class="ent"><img class="logo" src="img/logos/unsw.png" alt="" width="36" height="36"><span><span style="display: flex; align-items: center; gap: 8px; font-family: var(--hd); font-weight: var(--hw); font-size: 17px;">UNSW Sydney <span style="padding: 2px 8px; border-radius: 999px; background: #DCFCE7; color: #166534; font-family: var(--bd); font-size: 11px; font-weight: 600;">Graduated</span></span><span style="font-size: 13px; color: var(--mu);">B. Computer Science / Commerce · 2022 – 2026</span></span></span>
+            <span class="ent"><img class="logo" src="img/logos/unsw.png" alt="" width="36" height="36"><span><span style="display: flex; align-items: center; gap: 8px; font-family: var(--hd); font-weight: var(--hw); font-size: 17px;">UNSW Sydney <span style="padding: 2px 8px; border-radius: 999px; background: #166534; color: #FFFFFF; font-family: var(--bd); font-size: 11px; font-weight: 600;">Graduated</span></span><span style="font-size: 13px; color: var(--mu);">B. Computer Science / Commerce · 2022 – 2026</span></span></span>
             <svg class="chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"></path></svg>
           </summary>
           <ul style="margin: 0; padding: 0 18px 16px 36px; font-size: 14px; line-height: 1.6;">
