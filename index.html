@@ -76,6 +76,30 @@ html{scroll-behavior:smooth}body{margin:0;background:#F6F8FA;-webkit-font-smooth
 @media (max-width: 900px){.pt .tmin{min-width:0}.pt .tgrid{grid-template-columns:44px minmax(0,1fr) auto}.pt .c-plat,.pt .c-stack,.pt .c-status{display:none}.pt .mmeta{display:block}.pt .pdet{padding-left:44px !important}}
 @media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}.pt .rot{transition:none}}
 .pt .pcard .pimg{display:block;width:100%;aspect-ratio:2/1;object-fit:cover;object-position:left top;border-radius:calc(var(--r) - 6px);background:var(--sf);box-shadow:inset 0 0 0 1px var(--ch);margin-bottom:14px}
+.pt .ent{display:flex;align-items:center;gap:12px;min-width:0}
+.pt .logo{width:36px;height:36px;flex:none;border-radius:9px;object-fit:contain;background:#fff;box-shadow:inset 0 0 0 1px var(--ch)}
+.pt .logo.mono{display:flex;align-items:center;justify-content:center;background:#0F3B6E;color:#fff;font-family:var(--hd);font-size:12px;font-weight:700;letter-spacing:.02em;box-shadow:none}
+.pt .award{padding:6px 12px;border:none;border-radius:calc(var(--rb) - 4px);background:var(--ch);color:var(--tx);font:inherit;cursor:pointer;transition-property:background-color,color;transition-duration:.15s}
+.pt .award:hover{background:var(--chh)}
+.pt .award[aria-expanded="true"]{background:var(--tx);color:var(--pg)}
+.pt .mqs{display:flex;flex-direction:column;gap:8px;margin:0 -28px;padding:0;flex:none;width:calc(100% + 56px);min-width:0}
+.pt .mq{min-width:0;max-width:100%}
+.pt .mq{position:relative;overflow-x:clip;overflow-y:visible;padding-top:2px}
+.pt .mq::before,.pt .mq::after{content:"";position:absolute;top:0;bottom:0;width:48px;z-index:1;pointer-events:none}
+.pt .mq::before{left:0;background:linear-gradient(90deg,var(--tl),transparent)}
+.pt .mq::after{right:0;background:linear-gradient(270deg,var(--tl),transparent)}
+.pt .mqt{display:flex;gap:6px;width:max-content;animation:mq var(--d,50s) linear infinite}
+.pt .mq.rev .mqt{animation-direction:reverse}
+.pt .mqs:hover .mqt{animation-play-state:paused}
+.pt .mq .tip{flex:none}
+.pt .mq .tip::after{z-index:3}
+@keyframes mq{from{transform:translateX(-50%)}to{transform:translateX(0)}}
+@media (prefers-reduced-motion: reduce){.pt .mqs{margin:0;width:100%}.pt .mq{overflow:visible}.pt .mq::before,.pt .mq::after{display:none}.pt .mqt{animation:none;width:auto;flex-wrap:wrap}.pt .mq .dup{display:none}}
+.pt .pcard.wide{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);grid-template-rows:auto auto auto 1fr;column-gap:22px;row-gap:6px}
+.pt .pcard.wide .pimg{grid-column:1;grid-row:1 / span 4;margin:0;height:100%;min-height:150px;aspect-ratio:auto}
+.pt .pcard.wide>:not(.pimg){grid-column:2}
+.pt .pcard.wide .chips{align-self:end}
+@media (max-width: 620px){.pt .pcard.wide{display:flex}.pt .pcard.wide .pimg{height:auto;aspect-ratio:2/1;margin-bottom:14px}}
 </style>
 </head>
 <body>
@@ -167,7 +191,7 @@ html{scroll-behavior:smooth}body{margin:0;background:#F6F8FA;-webkit-font-smooth
         <h2 style="margin: 0 0 4px; font-size: 13px; font-weight: 600; color: var(--mu);">Experience</h2>
         <details open style="border-radius: var(--ri); background: var(--sf);">
           <summary style="display: flex; justify-content: space-between; align-items: center; gap: 12px; min-height: 64px; padding: 0 18px;">
-            <span><span style="display: block; font-family: var(--hd); font-weight: var(--hw); font-size: 17px;">Lyra | Faction (a16z)</span><span style="font-size: 13px; color: var(--mu);">Forward Deployed SWE · Feb 2026 – Now</span></span>
+            <span class="ent"><img class="logo" src="img/logos/faction.png" alt="" width="36" height="36"><span><span style="display: block; font-family: var(--hd); font-weight: var(--hw); font-size: 17px;">Lyra | Faction (a16z)</span><span style="font-size: 13px; color: var(--mu);">Forward Deployed SWE · Feb 2026 – Now</span></span></span>
             <svg class="chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"></path></svg>
           </summary>
           <ul style="margin: 0; padding: 0 18px 16px 36px; font-size: 14px; line-height: 1.6;">
@@ -183,7 +207,7 @@ html{scroll-behavior:smooth}body{margin:0;background:#F6F8FA;-webkit-font-smooth
         </details>
         <details style="border-radius: var(--ri); background: var(--sf);">
           <summary style="display: flex; justify-content: space-between; align-items: center; gap: 12px; min-height: 64px; padding: 0 18px;">
-            <span><span style="display: block; font-family: var(--hd); font-weight: var(--hw); font-size: 17px;">Macquarie Group</span><span style="font-size: 13px; color: var(--mu);">Backend SWE Intern · Jun – Dec 2025</span></span>
+            <span class="ent"><img class="logo" src="img/logos/macquarie.svg" alt="" width="36" height="36"><span><span style="display: block; font-family: var(--hd); font-weight: var(--hw); font-size: 17px;">Macquarie Group</span><span style="font-size: 13px; color: var(--mu);">Backend SWE Intern · Jun – Dec 2025</span></span></span>
             <svg class="chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"></path></svg>
           </summary>
           <ul style="margin: 0; padding: 0 18px 16px 36px; font-size: 14px; line-height: 1.6;">
@@ -193,13 +217,13 @@ html{scroll-behavior:smooth}body{margin:0;background:#F6F8FA;-webkit-font-smooth
         </details>
         <details style="border-radius: var(--ri); background: var(--sf);">
           <summary style="display: flex; justify-content: space-between; align-items: center; gap: 12px; min-height: 64px; padding: 0 18px;">
-            <span><span style="display: block; font-family: var(--hd); font-weight: var(--hw); font-size: 17px;">Humm Group</span><span style="font-size: 13px; color: var(--mu);">Marketing Intern · Feb – Jul 2024</span></span>
+            <span class="ent"><img class="logo" src="img/logos/humm.png" alt="" width="36" height="36"><span><span style="display: block; font-family: var(--hd); font-weight: var(--hw); font-size: 17px;">Humm Group</span><span style="font-size: 13px; color: var(--mu);">Marketing Intern · Feb – Jul 2024</span></span></span>
             <svg class="chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"></path></svg>
           </summary>
           <ul style="margin: 0; padding: 0 18px 16px 36px; font-size: 14px; line-height: 1.6;"><li>40+ SQL analyses with Pandas/Matplotlib and an Apps Script automation sending 80+ emails a week.</li></ul>
         </details>
         <div style="border-radius: var(--ri); background: var(--sf); display: flex; align-items: center; min-height: 64px; padding: 0 18px;">
-          <span><span style="display: block; font-family: var(--hd); font-weight: var(--hw); font-size: 17px;">Colgate-Palmolive</span><span style="font-size: 13px; color: var(--mu);">Omnichannel Intern · Jan – Jun 2023</span></span>
+          <span class="ent"><img class="logo" src="img/logos/colgate.png" alt="" width="36" height="36"><span><span style="display: block; font-family: var(--hd); font-weight: var(--hw); font-size: 17px;">Colgate-Palmolive</span><span style="font-size: 13px; color: var(--mu);">Omnichannel Intern · Jan – Jun 2023</span></span></span>
         </div>
       </section>
 
@@ -207,7 +231,7 @@ html{scroll-behavior:smooth}body{margin:0;background:#F6F8FA;-webkit-font-smooth
         <h2 style="margin: 0 0 4px; font-size: 13px; font-weight: 600; color: var(--mu);">Education</h2>
         <details open style="border-radius: var(--ri); background: var(--sf);">
           <summary style="display: flex; justify-content: space-between; align-items: center; gap: 12px; min-height: 64px; padding: 0 18px;">
-            <span><span style="display: flex; align-items: center; gap: 8px; font-family: var(--hd); font-weight: var(--hw); font-size: 17px;">UNSW Sydney <span style="padding: 2px 8px; border-radius: 999px; background: #DCFCE7; color: #166534; font-family: var(--bd); font-size: 11px; font-weight: 600;">Graduated</span></span><span style="font-size: 13px; color: var(--mu);">B. Computer Science / Commerce · 2022 – 2026</span></span>
+            <span class="ent"><img class="logo" src="img/logos/unsw.png" alt="" width="36" height="36"><span><span style="display: flex; align-items: center; gap: 8px; font-family: var(--hd); font-weight: var(--hw); font-size: 17px;">UNSW Sydney <span style="padding: 2px 8px; border-radius: 999px; background: #DCFCE7; color: #166534; font-family: var(--bd); font-size: 11px; font-weight: 600;">Graduated</span></span><span style="font-size: 13px; color: var(--mu);">B. Computer Science / Commerce · 2022 – 2026</span></span></span>
             <svg class="chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"></path></svg>
           </summary>
           <ul style="margin: 0; padding: 0 18px 16px 36px; font-size: 14px; line-height: 1.6;">
@@ -217,19 +241,20 @@ html{scroll-behavior:smooth}body{margin:0;background:#F6F8FA;-webkit-font-smooth
         </details>
         <details style="border-radius: var(--ri); background: var(--sf);">
           <summary style="display: flex; justify-content: space-between; align-items: center; gap: 12px; min-height: 64px; padding: 0 18px;">
-            <span><span style="display: block; font-family: var(--hd); font-weight: var(--hw); font-size: 17px;">North Sydney Boys High School</span><span style="font-size: 13px; color: var(--mu);">2016 – 2021</span></span>
+            <span class="ent"><span class="logo mono" aria-hidden="true">NS</span><span><span style="display: block; font-family: var(--hd); font-weight: var(--hw); font-size: 17px;">North Sydney Boys High School</span><span style="font-size: 13px; color: var(--mu);">2016 – 2021</span></span></span>
             <svg class="chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"></path></svg>
           </summary>
           <p style="margin: 0; padding: 0 18px 16px; font-size: 14px; line-height: 1.6;">ATAR 98.05 · HSC All-Rounder Achievers List</p>
         </details>
         <div style="margin-top: auto; padding: 12px 4px 0; display: flex; flex-direction: column; gap: 10px;">
           <span style="font-size: 13px; font-weight: 600; color: var(--mu);">Awards</span>
-          <div style="display: flex; flex-wrap: wrap; gap: 8px; font-size: 13px; font-weight: 500;">
-            <span style="padding: 6px 12px; border-radius: calc(var(--rb) - 4px); background: var(--ch);">Microsoft Protégé 2022 (2nd)</span>
-            <span style="padding: 6px 12px; border-radius: calc(var(--rb) - 4px); background: var(--ch);">UNSW Co-op Scholar</span>
-            <span style="padding: 6px 12px; border-radius: calc(var(--rb) - 4px); background: var(--ch);">CSESOC Flagship Hackathon</span>
-            <span style="padding: 6px 12px; border-radius: calc(var(--rb) - 4px); background: var(--ch);">UNIHACK</span>
+          <div id="awards" style="display: flex; flex-wrap: wrap; gap: 8px; font-size: 13px; font-weight: 500;">
+            <button type="button" class="award" aria-expanded="false" aria-controls="awd" data-d="Placed 2nd in a national case competition. As digital consultants, our team designed disaster readiness solutions for Australian floods: monitoring dashboards combining Bureau of Meteorology data, IoT water level sensors and weather APIs in real-time Power BI.">Microsoft Protégé 2022 (2nd)</button>
+            <button type="button" class="award" aria-expanded="false" aria-controls="awd" data-d="Selected for the UNSW Co-op Program, an industry scholarship with paid placements, which led to my backend engineering placement at Macquarie Group.">UNSW Co-op Scholar</button>
+            <button type="button" class="award" aria-expanded="false" aria-controls="awd" data-d="Built a full-stack habit tracker: a Next.js and Firebase web app plus a React Native app synced with Apple HealthKit, with streaks, success rates and a calendar view.">CSESOC Flagship Hackathon</button>
+            <button type="button" class="award" aria-expanded="false" aria-controls="awd" data-d="Built a cyberbullying detection web app in Next.js. It scraped social media comments with BeautifulSoup and used the ChatGPT API to classify types of bullying.">UNIHACK</button>
           </div>
+          <p id="awd" aria-live="polite" hidden style="margin: 0; padding: 12px 14px; border-radius: var(--ri); background: var(--sf); font-size: 13.5px; line-height: 1.6; color: var(--mu);"></p>
         </div>
       </section>
     </div>
@@ -241,12 +266,11 @@ html{scroll-behavior:smooth}body{margin:0;background:#F6F8FA;-webkit-font-smooth
 
     <div class="grid4" style="display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); grid-auto-rows: minmax(220px, auto); gap: 16px;">
 
-      <a href="https://www.breaktimeapp.io" class="tile span2 row3 dark" style="grid-column: span 2; grid-row: span 3; background: var(--ft); color: #FFFFFF; border-radius: var(--r); padding: 32px; display: flex; flex-direction: column; gap: 20px; overflow: hidden;">
+      <a href="https://www.breaktimeapp.io" class="tile span2 row2 dark" style="grid-column: span 2; grid-row: span 2; background: var(--ft); color: #FFFFFF; border-radius: var(--r); padding: 32px; display: flex; flex-direction: column; gap: 18px; overflow: hidden;">
         <div style="display: flex; justify-content: space-between; align-items: center; gap: 12px;">
           <div style="display: flex; flex-wrap: wrap; gap: 6px;">
-            <span style="padding: 6px 12px; border-radius: 999px; background: var(--ac); color: var(--oa); font-size: 12px; font-weight: 600;">Featured</span>
-            <span style="padding: 6px 12px; border-radius: 999px; background: #FFFFFF; color: #0F172A; font-size: 12px; font-weight: 600; font-variant-numeric: tabular-nums;">15,000+ users</span>
-            <span style="padding: 6px 12px; border-radius: 999px; background: #FFFFFF; color: #0F172A; font-size: 12px; font-weight: 600;">iOS · Swift</span>
+            <span style="display: inline-flex; align-items: center; gap: 7px; padding: 7px 14px; border-radius: 999px; background: var(--ac); color: #FFFFFF; font-size: 14px; font-weight: 700; font-variant-numeric: tabular-nums;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"></path></svg>15,000+ users</span>
+            <span style="display: inline-flex; align-items: center; padding: 7px 12px; border-radius: 999px; background: #FFFFFF; color: #0F172A; font-size: 12px; font-weight: 600;">iOS · Swift</span>
           </div>
           <svg class="parrow" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"></path></svg>
         </div>
@@ -254,9 +278,8 @@ html{scroll-behavior:smooth}body{margin:0;background:#F6F8FA;-webkit-font-smooth
           <h3 style="margin: 0; font-family: var(--hd); font-size: 36px; font-weight: var(--hw); letter-spacing: var(--ls);">Breaktime</h3>
           <p style="margin: 8px 0 0; max-width: 460px; font-size: 15px; line-height: 1.6; color: var(--fx);">An app blocker that forces people to complete one of 14+ friction modes and set a time limit before every open of a distracting app. Also with geofence based blocking, schedules, statistics, NFC and more.</p>
         </div>
-        <div style="flex-grow: 1; display: flex; flex-direction: column; justify-content: center; gap: 12px; min-height: 220px;">
+        <div style="flex-grow: 1; display: flex; flex-direction: column; justify-content: center; gap: 12px;">
           <div id="mocks" role="img" aria-label="Breaktime app screens" style="position: relative; width: 100%; aspect-ratio: 2000 / 1414;"></div>
-          <div id="dots" style="display: flex; justify-content: center; gap: 6px;" aria-hidden="true"></div>
         </div>
         <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 12px;">
           <div class="chips" style="margin: 0; padding: 0;"><span class="chip">Swift</span><span class="chip">SwiftUI</span><span class="chip">Screen Time API</span><span class="chip">XCTest</span></div>
@@ -268,8 +291,8 @@ html{scroll-behavior:smooth}body{margin:0;background:#F6F8FA;-webkit-font-smooth
       <a href="https://github.com/nathanchann/workspaces-app" class="tile pcard span1" style="grid-column: span 1;"><img class="pimg" src="img/projects/workspaces.jpg" alt="Workspaces app home and map screens" loading="lazy" decoding="async" style="object-position: center;"><div class="ph"><h3>Workspaces</h3><svg class="parrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"></path></svg></div><span class="pm">iOS · Android</span><p class="pd">Find and share places to study or work, with a client-side cache that speeds up map loads.</p><div class="chips"><span class="chip">React Native</span><span class="chip">Expo</span><span class="chip">PostgreSQL</span></div></a>
       <a href="https://airtable-seven-gamma.vercel.app" class="tile pcard span1" style="grid-column: span 1;"><img class="pimg" src="img/projects/airtable.jpg" alt="Airtable Clone grid view sorted by Name" loading="lazy" decoding="async"><div class="ph"><h3>Airtable Clone</h3><svg class="parrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"></path></svg></div><span class="pm">Web · Live demo</span><p class="pd">An Airtable-style spreadsheet database, deployed on Vercel.</p><div class="chips"><span class="chip">TypeScript</span></div></a>
       <a href="https://github.com/nathanchann/video-downloader" class="tile pcard span1" style="grid-column: span 1;"><img class="pimg" style="object-position: center;" src="img/projects/video-downloader.jpg" alt="video-downloader terminal run fetching TikTok, YouTube, Instagram and X videos" loading="lazy" decoding="async"><div class="ph"><h3>video-downloader</h3><svg class="parrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"></path></svg></div><span class="pm">CLI · Open source</span><p class="pd">Batch-downloads TikTok, YouTube, Instagram, X and Reddit videos without watermarks.</p><div class="chips"><span class="chip">Shell</span></div></a>
-      <div class="pcard span1" style="grid-column: span 1;"><img class="pimg" style="object-position: center;" src="img/projects/reel.jpg" alt="Reel pipeline terminal run downloading, editing and scheduling a reel" loading="lazy" decoding="async"><div class="ph"><h3>Reel pipeline</h3><span class="pv">Private</span></div><span class="pm">CLI · Content automation</span><p class="pd">Turns a video link into a posted Instagram Reel: downloads it, splices in a Breaktime clip with a frame-accurate cut, and schedules the post.</p><div class="chips"><span class="chip">Shell</span><span class="chip">FFmpeg</span><span class="chip">Cloudflare Workers</span></div></div>
-      <a href="https://github.com/nathanchann/claude-grep" class="tile pcard span1" style="grid-column: span 1;"><img class="pimg" style="object-position: center;" src="img/projects/claude-grep.jpg" alt="claude-grep terminal search returning resumable Claude Code sessions" loading="lazy" decoding="async"><div class="ph"><h3>claude-grep</h3><svg class="parrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"></path></svg></div><span class="pm">CLI · Open source</span><p class="pd">Searches past Claude Code sessions by keyword and prints the resume command for each hit.</p><div class="chips"><span class="chip">Shell</span></div></a>
+      <div class="pcard wide span2" style="grid-column: span 2;"><img class="pimg" style="object-position: center;" src="img/projects/reel.jpg" alt="Reel pipeline terminal run downloading, editing and scheduling a reel" loading="lazy" decoding="async"><div class="ph"><h3>Reel pipeline</h3><span class="pv">Private</span></div><span class="pm">CLI · Content automation</span><p class="pd">Turns a video link into a posted Instagram Reel: downloads it, splices in a Breaktime clip with a frame-accurate cut, and schedules the post.</p><div class="chips"><span class="chip">Shell</span><span class="chip">FFmpeg</span><span class="chip">Cloudflare Workers</span></div></div>
+      <a href="https://github.com/nathanchann/claude-grep" class="tile pcard wide span2" style="grid-column: span 2;"><img class="pimg" style="object-position: center;" src="img/projects/claude-grep.jpg" alt="claude-grep terminal search returning resumable Claude Code sessions" loading="lazy" decoding="async"><div class="ph"><h3>claude-grep</h3><svg class="parrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"></path></svg></div><span class="pm">CLI · Open source</span><p class="pd">Searches past Claude Code sessions by keyword and prints the resume command for each hit.</p><div class="chips"><span class="chip">Shell</span></div></a>
 
       <section class="span4" style="grid-column: span 4; background: var(--tl); border-radius: var(--r); padding: 8px; display: flex; flex-direction: column;">
         <h2 style="margin: 0; padding: 20px 20px 12px; font-family: var(--hd); font-size: 24px; font-weight: var(--hw);">All projects</h2>
@@ -353,6 +376,16 @@ html{scroll-behavior:smooth}body{margin:0;background:#F6F8FA;-webkit-font-smooth
       var on = t[0] === cur;
       return '<button type="button" class="seg" data-id="' + t[0] + '" aria-pressed="' + on + '" style="min-height: 36px; padding: 0 12px; border: none; border-radius: calc(var(--rb) - 4px); font: inherit; font-size: 13px; font-weight: 500; background: ' + (on ? 'var(--tl)' : 'transparent') + '; color: ' + (on ? 'var(--tx)' : 'var(--mu)') + '; box-shadow: ' + (on ? '0 1px 2px rgba(15,23,42,.12)' : 'none') + ';">' + t[1] + '</button>';
     }).join('');
+    function chip(n, dup) { return '<span class="tip' + (dup ? ' dup' : '') + '"' + (dup ? ' aria-hidden="true"' : '') + ' data-tip="' + (where[n] ? 'Used at ' + esc(where[n]) : '') + '" style="padding: 5px 10px; border-radius: calc(var(--rb) - 5px); background: var(--ch); white-space: nowrap;">' + esc(n) + '</span>'; }
+    if (cur === 'all') {
+      var all = groups.all, rows = [[], [], []];
+      all.forEach(function (n, i) { rows[i % 3].push(n); });
+      stackEl.innerHTML = '<div class="mqs">' + rows.map(function (r, i) {
+        var a = r.map(function (n) { return chip(n, false); }).join(''), b = r.map(function (n) { return chip(n, true); }).join('');
+        return '<div class="mq' + (i === 1 ? ' rev' : '') + '" style="--d: ' + [58, 66, 52][i] + 's;"><div class="mqt">' + a + b + '</div></div>';
+      }).join('') + '</div>';
+      return;
+    }
     stackEl.innerHTML = groups[cur].map(function (n) {
       return '<span class="tip" data-tip="' + (where[n] ? 'Used at ' + esc(where[n]) : '') + '" style="padding: 5px 10px; border-radius: calc(var(--rb) - 5px); background: var(--ch);">' + esc(n) + '</span>';
     }).join('');
@@ -362,6 +395,17 @@ html{scroll-behavior:smooth}body{margin:0;background:#F6F8FA;-webkit-font-smooth
     if (b) { renderStack(b.dataset.id); tabsEl.querySelector('[data-id="' + b.dataset.id + '"]').focus(); }
   });
   renderStack('all');
+
+  // Awards: click a chip to show its description
+  var awardsEl = document.getElementById('awards'), awd = document.getElementById('awd');
+  awardsEl.addEventListener('click', function (e) {
+    var b = e.target.closest('.award');
+    if (!b) return;
+    var open = b.getAttribute('aria-expanded') !== 'true';
+    awardsEl.querySelectorAll('.award').forEach(function (o) { o.setAttribute('aria-expanded', String(o === b && open)); });
+    awd.textContent = open ? b.dataset.d : '';
+    awd.hidden = !open;
+  });
 
   // All projects table with expandable rows
   var live = { badgeBg: '#DCFCE7', badgeFg: '#166534' };
@@ -429,7 +473,6 @@ html{scroll-behavior:smooth}body{margin:0;background:#F6F8FA;-webkit-font-smooth
   var srcs = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11].map(function (n) { return 'img/mockups/' + n + '.png'; });
   for (var i = srcs.length - 1; i > 0; i--) { var j = Math.floor(Math.random() * (i + 1)); var t = srcs[i]; srcs[i] = srcs[j]; srcs[j] = t; }
   var mocksEl = document.getElementById('mocks');
-  var dotsEl = document.getElementById('dots');
   var imgs = srcs.map(function (src) {
     var im = document.createElement('img');
     im.className = 'rot';
@@ -440,20 +483,11 @@ html{scroll-behavior:smooth}body{margin:0;background:#F6F8FA;-webkit-font-smooth
     mocksEl.appendChild(im);
     return im;
   });
-  var dots = srcs.map(function () {
-    var d = document.createElement('span');
-    d.className = 'rdot';
-    dotsEl.appendChild(d);
-    return d;
-  });
   var mi = 0, pv = -1;
   function paint() {
     imgs.forEach(function (im, k) {
       im.style.opacity = (k === mi || k === pv) ? '1' : '0';
       im.style.zIndex = k === mi ? '3' : k === pv ? '2' : '1';
-    });
-    dots.forEach(function (d, k) {
-      d.style.cssText = 'width: ' + (k === mi ? 18 : 6) + 'px; height: 6px; border-radius: 999px; background: ' + (k === mi ? '#FFFFFF' : 'var(--fl)') + ';';
     });
   }
   paint();
