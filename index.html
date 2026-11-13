@@ -77,7 +77,7 @@ html{scroll-behavior:smooth}body{margin:0;background:#F6F8FA;-webkit-font-smooth
 @media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}.pt .rot{transition:none}}
 .pt .pcard .pimg{display:block;width:100%;aspect-ratio:2/1;object-fit:cover;object-position:left top;border-radius:calc(var(--r) - 6px);background:var(--sf);box-shadow:inset 0 0 0 1px var(--ch);margin-bottom:14px}
 .pt .ent{display:flex;align-items:center;gap:12px;min-width:0}
-.pt .logo{width:36px;height:36px;flex:none;border-radius:9px;object-fit:contain;background:#fff;box-shadow:inset 0 0 0 1px var(--ch)}
+.pt .logo{width:36px;height:36px;flex:none;border-radius:9px;object-fit:contain;background:transparent}
 .pt .logo.mono{display:flex;align-items:center;justify-content:center;background:#0F3B6E;color:#fff;font-family:var(--hd);font-size:12px;font-weight:700;letter-spacing:.02em;box-shadow:none}
 .pt .award{padding:6px 12px;border:none;border-radius:calc(var(--rb) - 4px);background:var(--ch);color:var(--tx);font:inherit;cursor:pointer;transition-property:background-color,color;transition-duration:.15s}
 .pt .award:hover{background:var(--chh)}
@@ -182,7 +182,7 @@ html{scroll-behavior:smooth}body{margin:0;background:#F6F8FA;-webkit-font-smooth
             <h2 style="margin: 0; font-size: 13px; font-weight: 600; color: var(--mu);">Toolbox</h2>
             <span style="font-size: 12px; color: var(--mu);">Hover a skill to see where I used it</span>
           </div>
-          <div id="tabs" role="group" aria-label="Filter toolbox" style="display: flex; flex-wrap: wrap; gap: 2px; padding: 4px; border-radius: var(--rb); background: var(--ch);"></div>
+          <div id="tabs" role="group" aria-label="Filter toolbox" style="display: flex; flex-wrap: wrap; gap: 2px; padding: 3px; border-radius: var(--rb); background: var(--ch);"></div>
         </div>
         <div id="stack" style="display: flex; flex-wrap: wrap; gap: 6px; font-size: 12.5px; font-weight: 500;"></div>
       </section>
@@ -241,7 +241,7 @@ html{scroll-behavior:smooth}body{margin:0;background:#F6F8FA;-webkit-font-smooth
         </details>
         <details style="border-radius: var(--ri); background: var(--sf);">
           <summary style="display: flex; justify-content: space-between; align-items: center; gap: 12px; min-height: 64px; padding: 0 18px;">
-            <span class="ent"><span class="logo mono" aria-hidden="true">NS</span><span><span style="display: block; font-family: var(--hd); font-weight: var(--hw); font-size: 17px;">North Sydney Boys High School</span><span style="font-size: 13px; color: var(--mu);">2016 – 2021</span></span></span>
+            <span class="ent"><img class="logo" src="img/logos/nsbhs.png" alt="" width="36" height="36"><span><span style="display: block; font-family: var(--hd); font-weight: var(--hw); font-size: 17px;">North Sydney Boys High School</span><span style="font-size: 13px; color: var(--mu);">2016 – 2021</span></span></span>
             <svg class="chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"></path></svg>
           </summary>
           <p style="margin: 0; padding: 0 18px 16px; font-size: 14px; line-height: 1.6;">ATAR 98.05 · HSC All-Rounder Achievers List</p>
@@ -287,11 +287,11 @@ html{scroll-behavior:smooth}body{margin:0;background:#F6F8FA;-webkit-font-smooth
         </div>
       </a>
 
-      <div class="pcard span1" style="grid-column: span 1;"><img class="pimg" src="img/projects/signal.jpg" alt="Signal inbox view with sample emails" loading="lazy" decoding="async"><div class="ph"><h3>Signal</h3><span class="pv">Private</span></div><span class="pm">Web · Email client</span><p class="pd">Resumable archive sync, webhook-driven push notifications, TanStack Query + tRPC prefetching with Suspense, and raw emails parsed into S3.</p><div class="chips"><span class="chip">TypeScript</span><span class="chip">React</span><span class="chip">tRPC</span><span class="chip">TanStack Query</span><span class="chip">AWS S3</span></div></div>
+      <div class="tile pcard span1" style="grid-column: span 1;"><img class="pimg" src="img/projects/signal.jpg" alt="Signal inbox view with sample emails" loading="lazy" decoding="async"><div class="ph"><h3>Signal</h3><span class="pv">Private</span></div><span class="pm">Web · Email client</span><p class="pd">Resumable archive sync, webhook-driven push notifications, TanStack Query + tRPC prefetching with Suspense, and raw emails parsed into S3.</p><div class="chips"><span class="chip">TypeScript</span><span class="chip">React</span><span class="chip">tRPC</span><span class="chip">TanStack Query</span><span class="chip">AWS S3</span></div></div>
       <a href="https://github.com/nathanchann/workspaces-app" class="tile pcard span1" style="grid-column: span 1;"><img class="pimg" src="img/projects/workspaces.jpg" alt="Workspaces app home and map screens" loading="lazy" decoding="async" style="object-position: center;"><div class="ph"><h3>Workspaces</h3><svg class="parrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"></path></svg></div><span class="pm">iOS · Android</span><p class="pd">Find and share places to study or work, with a client-side cache that speeds up map loads.</p><div class="chips"><span class="chip">React Native</span><span class="chip">Expo</span><span class="chip">PostgreSQL</span></div></a>
       <a href="https://airtable-seven-gamma.vercel.app" class="tile pcard span1" style="grid-column: span 1;"><img class="pimg" src="img/projects/airtable.jpg" alt="Airtable Clone grid view sorted by Name" loading="lazy" decoding="async"><div class="ph"><h3>Airtable Clone</h3><svg class="parrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"></path></svg></div><span class="pm">Web · Live demo</span><p class="pd">An Airtable-style spreadsheet database, deployed on Vercel.</p><div class="chips"><span class="chip">TypeScript</span></div></a>
       <a href="https://github.com/nathanchann/video-downloader" class="tile pcard span1" style="grid-column: span 1;"><img class="pimg" style="object-position: center;" src="img/projects/video-downloader.jpg" alt="video-downloader terminal run fetching TikTok, YouTube, Instagram and X videos" loading="lazy" decoding="async"><div class="ph"><h3>video-downloader</h3><svg class="parrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"></path></svg></div><span class="pm">CLI · Open source</span><p class="pd">Batch-downloads TikTok, YouTube, Instagram, X and Reddit videos without watermarks.</p><div class="chips"><span class="chip">Shell</span></div></a>
-      <div class="pcard wide span2" style="grid-column: span 2;"><img class="pimg" style="object-position: center;" src="img/projects/reel.jpg" alt="Reel pipeline terminal run downloading, editing and scheduling a reel" loading="lazy" decoding="async"><div class="ph"><h3>Reel pipeline</h3><span class="pv">Private</span></div><span class="pm">CLI · Content automation</span><p class="pd">Turns a video link into a posted Instagram Reel: downloads it, splices in a Breaktime clip with a frame-accurate cut, and schedules the post.</p><div class="chips"><span class="chip">Shell</span><span class="chip">FFmpeg</span><span class="chip">Cloudflare Workers</span></div></div>
+      <div class="tile pcard wide span2" style="grid-column: span 2;"><img class="pimg" style="object-position: center;" src="img/projects/reel.jpg" alt="Reel pipeline terminal run downloading, editing and scheduling a reel" loading="lazy" decoding="async"><div class="ph"><h3>Reel pipeline</h3><span class="pv">Private</span></div><span class="pm">CLI · Content automation</span><p class="pd">Turns a video link into a posted Instagram Reel: downloads it, splices in a Breaktime clip with a frame-accurate cut, and schedules the post.</p><div class="chips"><span class="chip">Shell</span><span class="chip">FFmpeg</span><span class="chip">Cloudflare Workers</span></div></div>
       <a href="https://github.com/nathanchann/claude-grep" class="tile pcard wide span2" style="grid-column: span 2;"><img class="pimg" style="object-position: center;" src="img/projects/claude-grep.jpg" alt="claude-grep terminal search returning resumable Claude Code sessions" loading="lazy" decoding="async"><div class="ph"><h3>claude-grep</h3><svg class="parrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"></path></svg></div><span class="pm">CLI · Open source</span><p class="pd">Searches past Claude Code sessions by keyword and prints the resume command for each hit.</p><div class="chips"><span class="chip">Shell</span></div></a>
 
       <section class="span4" style="grid-column: span 4; background: var(--tl); border-radius: var(--r); padding: 8px; display: flex; flex-direction: column;">
@@ -358,7 +358,7 @@ html{scroll-behavior:smooth}body{margin:0;background:#F6F8FA;-webkit-font-smooth
   var heatEl = document.getElementById('heat');
   function fitHeat() {
     var cols = heatEl.children;
-    for (var c = 0; c < cols.length; c++) cols[c].style.display = '';
+    for (var c = 0; c < cols.length; c++) cols[c].style.display = 'flex';
     for (var k = 0; k < cols.length - 1 && heatEl.scrollWidth > heatEl.clientWidth; k++) cols[k].style.display = 'none';
   }
   fitHeat();
@@ -374,9 +374,16 @@ html{scroll-behavior:smooth}body{margin:0;background:#F6F8FA;-webkit-font-smooth
   function renderStack(cur) {
     tabsEl.innerHTML = tabs.map(function (t) {
       var on = t[0] === cur;
-      return '<button type="button" class="seg" data-id="' + t[0] + '" aria-pressed="' + on + '" style="min-height: 36px; padding: 0 12px; border: none; border-radius: calc(var(--rb) - 4px); font: inherit; font-size: 13px; font-weight: 500; background: ' + (on ? 'var(--tl)' : 'transparent') + '; color: ' + (on ? 'var(--tx)' : 'var(--mu)') + '; box-shadow: ' + (on ? '0 1px 2px rgba(15,23,42,.12)' : 'none') + ';">' + t[1] + '</button>';
+      return '<button type="button" class="seg" data-id="' + t[0] + '" aria-pressed="' + on + '" style="min-height: 28px; padding: 0 9px; border: none; border-radius: calc(var(--rb) - 5px); font: inherit; font-size: 12px; font-weight: 500; background: ' + (on ? 'var(--tl)' : 'transparent') + '; color: ' + (on ? 'var(--tx)' : 'var(--mu)') + '; box-shadow: ' + (on ? '0 1px 2px rgba(15,23,42,.12)' : 'none') + ';">' + t[1] + '</button>';
     }).join('');
-    function chip(n, dup) { return '<span class="tip' + (dup ? ' dup' : '') + '"' + (dup ? ' aria-hidden="true"' : '') + ' data-tip="' + (where[n] ? 'Used at ' + esc(where[n]) : '') + '" style="padding: 5px 10px; border-radius: calc(var(--rb) - 5px); background: var(--ch); white-space: nowrap;">' + esc(n) + '</span>'; }
+    var icons = {"TypeScript": "typescript", "Python": "python", "Swift": "swift", "JavaScript": "javascript", "React": "react", "Next.js": "nextdotjs", "HTML": "html5", "CSS": "css", "Tailwind CSS": "tailwindcss", "shadcn/ui": "shadcnui", "TanStack Query": "reactquery", "TanStack Table": "tanstack", "TanStack Virtual": "tanstack", "tRPC": "trpc", "Zod": "zod", "Clerk": "clerk", "Jest": "jest", "Cypress": "cypress", "Node.js": "nodedotjs", "FastAPI": "fastapi", "SQLAlchemy": "sqlalchemy", "Pydantic": "pydantic", "Django": "django", "PostgreSQL": "postgresql", "Redis": "redis", "Prisma": "prisma", "Drizzle": "drizzle", "Supabase": "supabase", "Neon": "neon", "Snowflake": "snowflake", "Java": "openjdk", "C": "c", "Bash": "gnubash", "SwiftUI": "swift", "Screen Time API": "apple", "XCTest": "swift", "Xcode": "xcode", "React Native": "react", "Expo": "expo", "LiveKit": "livekit", "Claude Code": "claude", "Docker": "docker", "Kubernetes": "kubernetes", "Vercel": "vercel", "Railway": "railway", "Cloudflare Workers": "cloudflareworkers", "GitHub Actions": "githubactions", "GitLab CI": "gitlab", "Bazel": "bazel", "Grafana": "grafana", "Loki / PromQL": "grafana", "Sentry": "sentry", "PostHog": "posthog", "FFmpeg": "ffmpeg", "Git": "git", "Graphite": "graphite", "Linear": "linear", "Jira": "jira", "Figma": "figma", "Pandas": "pandas", "R": "r", "Looker Studio": "looker", "Google Apps Script": "googleappsscript"};
+    var G = { db: '<path d="M4 6c0-1.7 3.6-3 8-3s8 1.3 8 3-3.6 3-8 3-8-1.3-8-3Zm0 0v12c0 1.7 3.6 3 8 3s8-1.3 8-3V6M4 12c0 1.7 3.6 3 8 3s8-1.3 8-3"/>', ai: '<path d="M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8Z"/><path d="M19 15l.8 2.2L22 18l-2.2.8L19 21l-.8-2.2L16 18l2.2-.8Z"/>', cloud: '<path d="M7 18h10a4 4 0 0 0 .5-8 6 6 0 0 0-11.4 1.5A3.3 3.3 0 0 0 7 18Z"/>', code: '<path d="m9 8-4 4 4 4M15 8l4 4-4 4"/>' };
+    var gk = { 'SQL': 'db', 'Oban': 'db', 'Alembic': 'db', 'OpenAI API': 'ai', 'LLM evals': 'ai', 'Langfuse': 'ai', 'Cartesia': 'ai', 'Hamming': 'ai', 'Bluejay': 'ai', 'AWS S3': 'cloud', 'Doppler': 'cloud' };
+    function ico(n) {
+      if (icons[n]) return '<img src="img/tools/' + icons[n] + '.svg" width="14" height="14" alt="" loading="lazy" decoding="async" style="display: block; flex: none;">';
+      return '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#8B949E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: none;">' + G[gk[n] || 'code'] + '</svg>';
+    }
+    function chip(n, dup) { return '<span class="tip' + (dup ? ' dup' : '') + '"' + (dup ? ' aria-hidden="true"' : '') + ' data-tip="' + (where[n] ? 'Used at ' + esc(where[n]) : '') + '" style="display: inline-flex; align-items: center; gap: 6px; padding: 5px 10px; border-radius: calc(var(--rb) - 5px); background: var(--ch); white-space: nowrap;">' + ico(n) + esc(n) + '</span>'; }
     if (cur === 'all') {
       var all = groups.all, rows = [[], [], []];
       all.forEach(function (n, i) { rows[i % 3].push(n); });
@@ -386,9 +393,7 @@ html{scroll-behavior:smooth}body{margin:0;background:#F6F8FA;-webkit-font-smooth
       }).join('') + '</div>';
       return;
     }
-    stackEl.innerHTML = groups[cur].map(function (n) {
-      return '<span class="tip" data-tip="' + (where[n] ? 'Used at ' + esc(where[n]) : '') + '" style="padding: 5px 10px; border-radius: calc(var(--rb) - 5px); background: var(--ch);">' + esc(n) + '</span>';
-    }).join('');
+    stackEl.innerHTML = groups[cur].map(function (n) { return chip(n, false); }).join('');
   }
   tabsEl.addEventListener('click', function (e) {
     var b = e.target.closest('button');
