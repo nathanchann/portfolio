@@ -204,14 +204,15 @@ html{scroll-behavior:smooth}body{margin:0;background:#F6F8FA;-webkit-font-smooth
             <svg class="chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"></path></svg>
           </summary>
           <ul style="margin: 0; padding: 0 18px 16px 36px; font-size: 14px; line-height: 1.6;">
+            <li><strong>Voice agents and DevOps:</strong> Leading real-time AI voice agent development and DevOps across LiveKit and Cartesia, including CI/CD orchestration, config-as-code, automated load testing and performance tuning such as LLM chunk buffering.</li>
             <li><strong>Citation and document highlighting:</strong> Led development of document highlighting that links every AI-extracted order value to its exact location in the customer's original Excel, PDF, email or photo, so representatives can verify it instantly. Replaced a paid vendor with an in-house pipeline at 99.6% accuracy.</li>
             <li><strong>Evaluation:</strong> Built an evaluation framework and daily drift monitoring that caught two silent vendor regressions.</li>
             <li><strong>Extraction:</strong> Eliminated duplicate line items and reduced email extraction cost by about 4x.</li>
             <li><strong>ERP integration:</strong> Migrated Epicor P21 lookups to a Snowflake replica with API fallback, at a 100% match rate on production orders.</li>
-            <li><strong>Outlook integration:</strong> Built OAuth, encrypted credential storage and connection management.</li>
+            <li><strong>Integrations:</strong> Built the Outlook and P21 integrations full stack with FastAPI, SQLAlchemy and Alembic, encrypted token storage and typed Pydantic APIs, plus a React UI with TanStack Query and Zod validation.</li>
             <li><strong>Workflows:</strong> Built order assignment and automatic routing of escalated chats to the least-busy representative.</li>
+            <li><strong>Chatbot latency:</strong> Improved AI chatbot latency by 300% by optimising SSE streaming and using request-scoped database sessions.</li>
             <li><strong>Infrastructure:</strong> Migrated production storage to AWS S3 with no data loss and added job-queue alerting.</li>
-            <li><strong>Voice agents:</strong> Built CI and load testing for real-time voice agents on LiveKit and Cartesia.</li>
           </ul>
         </details>
         <details style="border-radius: var(--ri); background: var(--sf);">
@@ -220,8 +221,9 @@ html{scroll-behavior:smooth}body{margin:0;background:#F6F8FA;-webkit-font-smooth
             <svg class="chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"></path></svg>
           </summary>
           <ul style="margin: 0; padding: 0 18px 16px 36px; font-size: 14px; line-height: 1.6;">
-            <li>Dependency DAG orchestrator with re-runs and Redis caching, cutting deal and rate load times by 90%.</li>
-            <li>Loki/PromQL recording rules to query 500TB a month past Grafana limits.</li>
+            <li>Worked on a distributed proof of concept to upgrade financial risk calculations within the monolithic Macquarie Trading System.</li>
+            <li>Optimised heavy risk calculations by splitting jobs through a dependency DAG orchestrator, enabling parallelisation at a granular work-unit level, re-runs on failure and Redis caching, which cut deal and rate load times by 90%.</li>
+            <li>Led a production log and metrics pipeline using Loki and PromQL recording rules to query 500TB a month, overcoming Grafana limits.</li>
           </ul>
         </details>
         <details style="border-radius: var(--ri); background: var(--sf);">
@@ -229,7 +231,7 @@ html{scroll-behavior:smooth}body{margin:0;background:#F6F8FA;-webkit-font-smooth
             <span class="ent"><img class="logo" src="img/logos/humm.png" alt="" width="36" height="36"><span><span style="display: block; font-family: var(--hd); font-weight: var(--hw); font-size: 17px;">Humm Group</span><span style="font-size: 13px; color: var(--mu);">Marketing Intern · Feb – Jul 2024</span></span></span>
             <svg class="chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"></path></svg>
           </summary>
-          <ul style="margin: 0; padding: 0 18px 16px 36px; font-size: 14px; line-height: 1.6;"><li>40+ SQL analyses with Pandas/Matplotlib and an Apps Script automation sending 80+ emails a week.</li></ul>
+          <ul style="margin: 0; padding: 0 18px 16px 36px; font-size: 14px; line-height: 1.6;"><li>Wrote 40+ advanced SQL queries for financial analysis with Pandas and Matplotlib while refactoring data.</li><li>Coded a Google Apps Script automation in the project tracker that sends 80+ emails a week.</li></ul>
         </details>
         <div style="border-radius: var(--ri); background: var(--sf); display: flex; align-items: center; min-height: 64px; padding: 0 18px;">
           <span class="ent"><img class="logo" src="img/logos/colgate.png" alt="" width="36" height="36"><span><span style="display: block; font-family: var(--hd); font-weight: var(--hw); font-size: 17px;">Colgate-Palmolive</span><span style="font-size: 13px; color: var(--mu);">Omnichannel Intern · Jan – Jun 2023</span></span></span>
